@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header>
+            <a href="#" class="logo"><img src="./img/Logo-Netflix.png" alt="Logo Netflix"></a>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Peliculas</a></li>
+                <li><a href="#">Ultimo</a></li>
+                <li><a href="#">Mi lista</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="search">
+                <button class="btnbuscar"> <span class="material-icons">search</span></button>
+            </div>
+        </header>
+        <section class="banner"> 
+        <img src="./img/JOJOS .jfif" alt="personaje" class="bg"/>
+        <span class="sombraImg"></span>
+        <div class="content">
+        <img src="./img/logo_jojos-removebg-preview.png" alt="movieTitle">
+        <h4 class="titulopie">  
+            <span>2012</span>
+            <span> 6 temporadas</span>
+            <span><i>12+</i></span>
+            <span> Serie</span>
+        </h4>
+        <p>más conocida mundialmente como JoJo s Bizarre Adventure , narra la historia de la familia Joestar a través de las décadas y sus continuos enfrentamientos con el malvado vampiro Dio Brando y su legado.</p>
+        <div class="buttons">
+            <a href="#">play</a>
+            <a href="#">Mi lista</a>
+        </div>
+    </div>
+    <a href="#" class="play" onclick="toggleVideo();"> <img src="./img/image-removebg-preview.png">Watch trailer</a>
+    </section>
+    <section class="trailer">
+        <video src="./img/jojos stone ocean.mp4" controls="true"></video>
+        <img src="./img/cerrar.png" class="close" onclick="toggleVideo();">
+
+    </section>
+    </main>
+    <script>
+        function toggleVideo(){
+            const trailer= document.querySelector(".trailer");
+            const video= document.querySelector("video");
+            trailer.classList.toggle("active");
+            video.currentTime=0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
